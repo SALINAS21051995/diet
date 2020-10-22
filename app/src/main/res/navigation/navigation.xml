@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.appside.losefatsquick.view.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_dashboard"
+            app:destination="@id/dashboard" />
+        <action
+            android:id="@+id/action_login_to_patientHome"
+            app:destination="@id/patientHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.appside.losefatsquick.view.admin.Dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_patientProfile"
+            app:destination="@id/patientProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientHome"
+        android:name="com.appside.losefatsquick.view.patient.PatientHome"
+        android:label="fragment_patient_home"
+        tools:layout="@layout/fragment_patient_home" >
+        <action
+            android:id="@+id/action_patientHome_to_patientProgress"
+            app:destination="@id/patientProgress" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientProfile"
+        android:name="com.appside.losefatsquick.view.admin.PatientProfile"
+        android:label="fragment_patient_profile"
+        tools:layout="@layout/fragment_patient_profile" />
+    <fragment
+        android:id="@+id/patientProgress"
+        android:name="com.appside.losefatsquick.view.patient.PatientProgress"
+        android:label="fragment_patient_progress"
+        tools:layout="@layout/fragment_patient_progress" />
+</navigation>

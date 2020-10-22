@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:id="@+id/loginContainer"
+            android:layout_width="325dp"
+            android:layout_height="370dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="206dp"
+                android:layout_height="164dp"
+                android:layout_marginBottom="5dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/login_image_description_text"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_diet"
+                tools:srcCompat="@drawable/ic_diet" />
+
+            <EditText
+                android:id="@+id/userTextField"
+                style="@style/text_input_style"
+                android:hint="@string/login_email_text"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/passwordTextField"
+                style="@style/text_input_style"
+                android:autofillHints=""
+                android:hint="@string/login_password_text"
+                android:inputType="textPersonName|textPassword|textEmailAddress" />
+
+            <Button
+                android:id="@+id/loginButton"
+                style="@style/login_button_style"
+                android:layout_width="match_parent"
+                android:text="@string/login_button_text"
+                app:backgroundTint="@color/colorSecondary" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

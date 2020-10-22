@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="login_button_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="text_input_style"  >
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/text_input_shape</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:ems">10</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="title_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
