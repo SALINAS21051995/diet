@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".view.admin.Dashboard">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,9 +54,12 @@
 
         <TextView
             android:id="@+id/textView2"
+            style="@style/progress_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/dashboard_value_info_text"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -66,41 +67,55 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView"
-            app:layout_constraintEnd_toStartOf="@+id/textView2" />
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            tools:text="@string/tool_data_values_text" />
 
         <TextView
             android:id="@+id/textView4"
+            style="@style/progress_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:text="TextView"
+            android:text="@string/dashboard_progressbar_1_text"
             app:layout_constraintBottom_toTopOf="@+id/progressBar2"
             app:layout_constraintStart_toEndOf="@+id/progressBar"
             app:layout_constraintTop_toTopOf="@+id/progressBar" />
 
         <TextView
             android:id="@+id/textView5"
+            style="@style/progress_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:text="TextView"
+            android:text="@string/dashboard_progressbar_2_text"
             app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
             app:layout_constraintStart_toEndOf="@+id/progressBar2"
             app:layout_constraintTop_toTopOf="@+id/progressBar2" />
 
         <TextView
             android:id="@+id/textView6"
+            style="@style/progress_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:text="TextView"
+            android:text="@string/dashboard_progressbar_3_text"
             app:layout_constraintBottom_toBottomOf="@+id/progressBar3"
             app:layout_constraintStart_toEndOf="@+id/progressBar3"
             app:layout_constraintTop_toTopOf="@+id/progressBar3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:id="@+id/patientsRecyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+</layout>

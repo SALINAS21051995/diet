@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModel;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,8 +36,12 @@ public class Login extends Fragment {
 
     private void initComponents(){
         binding.loginButton.setOnClickListener(v -> {
-            System.out.println("hola");
+            goToNextView();
         });
+    }
+
+    private void goToNextView(){
+        Navigation.findNavController(this.getView()).navigate(LoginDirections.actionLoginToDashboard("paquete"));
     }
 
 }

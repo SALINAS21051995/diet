@@ -8,4 +8,32 @@
     <string name="hello_blank_fragment">dsa</string>
     <string name="login_image_description_text">icono de inicio de sesión</string>
     <string name="dashboard_text_1">This week</string>
+    <string name="patient_name_textView_tool">Carlos Salinas</string>
+    <string name="last_update_textView_tool">Last update:</string>
+    <string name="last_update_value_textView_tool">30 min.</string>
+    <string name="dashboard_progressbar_1_text">Hombres</string>
+    <string name="dashboard_progressbar_2_text">Mujeres</string>
+    <string name="dashboard_progressbar_3_text">Otros</string>
+    <string name="dashboard_value_info_text">perdidos</string>
+    <string name="tool_data_values_text">234567</string>
+    <!-- Profile patients Fragment -->
+    <string name="patients_age_description_text">Edad: </string>
+    <string name="patients_height_description_text">Altura: </string>
+    <string name="patients_time_description_text">Tiempo: </string>
+    <string name="patients_last_weight_description_text">Peso anterior</string>
+    <string name="patients_actual_weight_description_text">Peso actual</string>
+    <string name="patient_name_tool_text">Carlos Salinas Pina</string>
+    <string name="patient_age_tool_text">25</string>
+    <string name="patients_time_tool_text">3 semanas.</string>
+    <string name="patient_height_tool_text">175 mts.</string>
+    <string name="patient_last_weight_tool_text">90 kg.</string>
+    <string name="patient_actual_weight_tool_text">85 kg.</string>
+    <string name="patient_difference_weight_tool_text">5 kg.</string>
+    <string name="patient_description_image_text">Imagen de paciente</string>
+    <string name="patient_button_confirm_text">Confirmar</string>
+    <string name="patients_pictures_description">Fotos:</string>
+    <string name="patients_lost_weight_result_description">Esta semana se han perdido</string>
+    <string name="patients_images_content_description_text">Imagen de avance del paciente</string>
+
+
 </resources>

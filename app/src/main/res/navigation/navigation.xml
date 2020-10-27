@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_dashboard_to_patientProfile"
             app:destination="@id/patientProfile" />
+        <argument
+            android:name="arg"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/patientHome"
