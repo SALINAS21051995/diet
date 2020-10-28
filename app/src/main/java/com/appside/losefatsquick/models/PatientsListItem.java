@@ -1,22 +1,23 @@
 package com.appside.losefatsquick.models;
 
-public class PatientsListItem {
-    private String name = "";
-    private String lastUpdate = "";
-    private String measurementValue = "min.";
+import com.appside.losefatsquick.view.admin.PatientProfile;
 
-    public PatientsListItem(String name, String lastUpdate, String measurementValue){
-        this.name = name;
+public class PatientsListItem {
+    private String lastUpdate;
+    private String measurementValue;
+    private PatientProcess patientProcess;
+    public PatientsListItem(PatientProcess patientProcess, String lastUpdate, String measurementValue){
+        this.patientProcess = patientProcess;
         this.lastUpdate = lastUpdate;
         this.measurementValue = measurementValue;
     }
 
-    public String getName() {
-        return name;
+    public PatientProcess getPatientProcess() {
+        return patientProcess;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPatientProcess(PatientProcess name) {
+        this.patientProcess = name;
     }
 
     public String getLastUpdate() {

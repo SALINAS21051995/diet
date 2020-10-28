@@ -3,10 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".view.admin.PatientProfile">
-
+    <data>
+        <variable name="patient" type="com.appside.losefatsquick.view.admin.PatientProfile"/>
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textView20"
@@ -35,10 +40,10 @@
 
             <ImageView
                 android:id="@+id/patients_picture_imageView"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="@string/patient_description_image_text"
-                app:srcCompat="@tools:sample/avatars[0]"
+                app:srcCompat="@drawable/ic_baseline_image_24"
                 tools:src="@tools:sample/avatars" />
 
             <LinearLayout
@@ -55,6 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:text="@={patient.viewModel.patient.name}"
                     tools:text="@string/patient_name_tool_text" />
 
                 <LinearLayout
@@ -75,6 +81,7 @@
                         style="@style/patient_info_text_style"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@={patient.viewModel.patient.age}"
                         tools:text="@string/patient_age_tool_text" />
 
                     <TextView
@@ -91,6 +98,7 @@
                         style="@style/patient_info_text_style"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@={patient.viewModel.patient.height}"
                         tools:text="@string/patient_height_tool_text" />
 
                     <TextView
@@ -105,6 +113,7 @@
                         style="@style/patient_info_text_style"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@={patient.viewModel.patient.time}"
                         tools:text="@string/patients_time_tool_text" />
 
 
@@ -127,6 +136,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="@+id/textView14"
             app:layout_constraintTop_toBottomOf="@+id/textView14"
+            android:text="@={patient.viewModel.patient.lastWeight}"
             tools:text="@string/patient_last_weight_tool_text" />
 
         <TextView
@@ -162,6 +172,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="@+id/textView17"
             app:layout_constraintTop_toBottomOf="@+id/textView17"
+            android:text="@={patient.viewModel.patient.actualWeight}"
             tools:text="@string/patient_actual_weight_tool_text" />
 
         <TextView
@@ -185,6 +196,7 @@
             android:textSize="14sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
             app:layout_constraintStart_toEndOf="@+id/textView11"
+            android:text="@={patient.viewModel.patient.weightDifference}"
             tools:text="@string/patient_difference_weight_tool_text" />
 
         <TextView
@@ -202,11 +214,13 @@
             android:id="@+id/confirm_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:text="@string/patient_button_confirm_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -217,7 +231,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView19"
             tools:src="@tools:sample/avatars"
-            app:srcCompat="@tools:sample/avatars"
+            app:srcCompat="@drawable/ic_baseline_image_24"
             />
 
         <ImageView
@@ -227,7 +241,7 @@
             app:layout_constraintTop_toTopOf="@+id/imageView3"
             android:contentDescription="@string/patients_images_content_description_text"
             tools:src="@tools:sample/avatars"
-            app:srcCompat="@tools:sample/avatars"
+            app:srcCompat="@drawable/ic_baseline_image_24"
             style="@style/patients_images_style" />
 
         <ImageView
@@ -237,7 +251,7 @@
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="@+id/imageView4"
             android:contentDescription="@string/patients_images_content_description_text"
-            app:srcCompat="@tools:sample/avatars"
+            app:srcCompat="@drawable/ic_baseline_image_24"
             tools:src="@tools:sample/avatars" />
 
         <ImageView
@@ -248,7 +262,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3"
             android:contentDescription="@string/patients_images_content_description_text"
-            app:srcCompat="@tools:sample/avatars"
+            app:srcCompat="@drawable/ic_baseline_image_24"
             tools:src="@tools:sample/avatars" />
 
         <ImageView
@@ -258,7 +272,7 @@
             app:layout_constraintStart_toEndOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
             android:contentDescription="@string/patients_images_content_description_text"
-            app:srcCompat="@tools:sample/avatars"
+            app:srcCompat="@drawable/ic_baseline_image_24"
             tools:src="@tools:sample/avatars" />
 
         <ImageView
@@ -268,7 +282,7 @@
             app:layout_constraintStart_toEndOf="@+id/imageView7"
             app:layout_constraintTop_toTopOf="@+id/imageView7"
             android:contentDescription="@string/patients_images_content_description_text"
-            app:srcCompat="@tools:sample/avatars"
+            app:srcCompat="@drawable/ic_baseline_image_24"
             tools:src="@tools:sample/avatars" />
 
         <ImageView
@@ -279,7 +293,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView6"
             android:contentDescription="@string/patients_images_content_description_text"
-            app:srcCompat="@tools:sample/avatars"
+            app:srcCompat="@drawable/ic_baseline_image_24"
             tools:src="@tools:sample/avatars" />
 
         <ImageView
@@ -289,7 +303,7 @@
             app:layout_constraintStart_toEndOf="@+id/imageView9"
             app:layout_constraintTop_toTopOf="@+id/imageView9"
             android:contentDescription="@string/patients_images_content_description_text"
-            app:srcCompat="@tools:sample/avatars"
+            app:srcCompat="@drawable/ic_baseline_image_24"
             tools:src="@tools:sample/avatars" />
 
         <ImageView
@@ -299,7 +313,8 @@
             app:layout_constraintStart_toEndOf="@+id/imageView10"
             app:layout_constraintTop_toTopOf="@+id/imageView10"
             android:contentDescription="@string/patients_images_content_description_text"
-            app:srcCompat="@tools:sample/avatars"
+            app:srcCompat="@drawable/ic_baseline_image_24"
             tools:src="@tools:sample/avatars" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

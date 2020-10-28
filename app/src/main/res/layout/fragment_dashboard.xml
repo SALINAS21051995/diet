@@ -3,44 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".view.admin.Dashboard">
-
+    <data>
+        <variable
+            name="dashboard"
+            type="com.appside.losefatsquick.view.admin.Dashboard" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white">
 
         <ProgressBar
-            android:id="@+id/progressBar"
+            android:id="@+id/menProgressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
             android:max="100"
-            android:progress="50"
+            android:progress="87"
             app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <ProgressBar
-            android:id="@+id/progressBar2"
+            android:id="@+id/womanProgressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
             android:max="100"
-            android:progress="20"
-            app:layout_constraintStart_toStartOf="@+id/progressBar"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+            android:progress="36"
+            app:layout_constraintStart_toStartOf="@+id/menProgressBar"
+            app:layout_constraintTop_toBottomOf="@+id/menProgressBar" />
 
         <ProgressBar
-            android:id="@+id/progressBar3"
+            android:id="@+id/otherProgressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
             android:max="100"
-            android:progress="30"
-            app:layout_constraintStart_toStartOf="@+id/progressBar2"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+            android:progress="25"
+            app:layout_constraintStart_toStartOf="@+id/womanProgressBar"
+            app:layout_constraintTop_toBottomOf="@+id/womanProgressBar" />
 
         <TextView
             android:id="@+id/textView"
@@ -69,6 +73,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:text="@={dashboard.viewModel.data.totalLost}"
+            android:textColor="@color/black"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
             tools:text="@string/tool_data_values_text" />
@@ -81,9 +87,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:text="@string/dashboard_progressbar_1_text"
-            app:layout_constraintBottom_toTopOf="@+id/progressBar2"
-            app:layout_constraintStart_toEndOf="@+id/progressBar"
-            app:layout_constraintTop_toTopOf="@+id/progressBar" />
+            app:layout_constraintBottom_toTopOf="@+id/womanProgressBar"
+            app:layout_constraintStart_toEndOf="@+id/menProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/menProgressBar" />
 
         <TextView
             android:id="@+id/textView5"
@@ -93,9 +99,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:text="@string/dashboard_progressbar_2_text"
-            app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
-            app:layout_constraintStart_toEndOf="@+id/progressBar2"
-            app:layout_constraintTop_toTopOf="@+id/progressBar2" />
+            app:layout_constraintBottom_toBottomOf="@+id/womanProgressBar"
+            app:layout_constraintStart_toEndOf="@+id/womanProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/womanProgressBar" />
 
         <TextView
             android:id="@+id/textView6"
@@ -105,17 +111,29 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:text="@string/dashboard_progressbar_3_text"
-            app:layout_constraintBottom_toBottomOf="@+id/progressBar3"
-            app:layout_constraintStart_toEndOf="@+id/progressBar3"
-            app:layout_constraintTop_toTopOf="@+id/progressBar3" />
+            app:layout_constraintBottom_toBottomOf="@+id/otherProgressBar"
+            app:layout_constraintStart_toEndOf="@+id/otherProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/otherProgressBar" />
 
-        <androidx.recyclerview.widget.RecyclerView
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:id="@+id/patientsRecyclerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+            app:layout_constraintTop_toBottomOf="@+id/otherProgressBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/patientsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

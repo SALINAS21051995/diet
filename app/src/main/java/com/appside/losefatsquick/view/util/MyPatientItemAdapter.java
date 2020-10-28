@@ -34,7 +34,7 @@ public class MyPatientItemAdapter extends RecyclerView.Adapter<MyPatientItemAdap
     @Override
     public void onBindViewHolder(MyPatientItemAdapter.MyViewHolder holder, int position) {
         PatientsListItem currentItem = this.myDataSet.get(position);
-        holder.patient.setText(currentItem.getName());
+        holder.patient.setText(currentItem.getPatientProcess().getName());
         holder.lastUpdate.setText(currentItem.getLastUpdate() + " " + currentItem.getMeasurementValue());
     }
 
