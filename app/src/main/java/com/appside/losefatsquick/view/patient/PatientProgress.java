@@ -10,11 +10,6 @@ import android.view.ViewGroup;
 
 import com.appside.losefatsquick.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PatientProgress#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class PatientProgress extends Fragment {
 
     public PatientProgress() {

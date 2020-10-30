@@ -41,7 +41,14 @@ public class Login extends Fragment {
     }
 
     private void goToNextView(){
-        Navigation.findNavController(this.getView()).navigate(LoginDirections.actionLoginToDashboard("paquete"));
+        System.out.println(binding.userTextField.getText());
+        if(binding.userTextField.getText().equals("admin")){
+            System.out.println("true");
+            Navigation.findNavController(this.getView()).navigate(LoginDirections.actionLoginToDashboard("paquete"));
+        }else{
+            System.out.println("else");
+            Navigation.findNavController(this.getView()).navigate(LoginDirections.actionLoginToPatientHome());
+        }
     }
 
 }

@@ -34,6 +34,18 @@
     <string name="patients_pictures_description">Fotos:</string>
     <string name="patients_lost_weight_result_description">Esta semana se han perdido</string>
     <string name="patients_images_content_description_text">Imagen de avance del paciente</string>
+    <!-- Patients Home Fragment -->
+    <string name="patient_profile_weight">Peso: </string>
+    <string name="patient_profile_start_date">Fecha inicio: </string>
+    <string name="patient_profile_date_tools_text">12/10/2020</string>
+    <string name="patient_profile_diet_tools_text">Dieta numero uno</string>
+    <string name="patient_profile_weekly_menu_description_text">Menu semanal:</string>
+    <string name="patient_profile_imc_description_text">IMC</string>
+    <string name="patient_profile_lost_calories_description_text">Cal. perdidas</string>
+    <string name="diet_schedule_count_tools_text">1</string>
+    <string name="diet_schedule_col2_tools_text">Columna 2</string>
+    <string name="diet_schedule_col3_tools_text">Columna 3</string>
+    <string name="diet_schedule_col4_tools_text">Columna 4</string>
 
 
 </resources>

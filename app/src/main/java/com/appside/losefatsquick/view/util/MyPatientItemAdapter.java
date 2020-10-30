@@ -3,22 +3,17 @@ package com.appside.losefatsquick.view.util;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.appside.losefatsquick.R;
 import com.appside.losefatsquick.models.PatientsListItem;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
 public class MyPatientItemAdapter extends RecyclerView.Adapter<MyPatientItemAdapter.MyViewHolder> {
-    public OnItemClickListener listener = null;
-    public List<PatientsListItem> myDataSet = null;
+    public OnItemClickListener listener;
+    public List<PatientsListItem> myDataSet;
     public MyPatientItemAdapter(List<PatientsListItem> myDataSet, OnItemClickListener listener){
         this.listener = listener;
         this.myDataSet = myDataSet;
@@ -44,8 +39,8 @@ public class MyPatientItemAdapter extends RecyclerView.Adapter<MyPatientItemAdap
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView patient = null;
-        TextView lastUpdate = null;
+        TextView patient;
+        TextView lastUpdate;
         public MyViewHolder(View itemView){
             super(itemView);
             itemView.setOnClickListener(this);
