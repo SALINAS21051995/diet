@@ -2,6 +2,7 @@ package com.appside.losefatsquick.view;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModel;
@@ -41,8 +42,9 @@ public class Login extends Fragment {
     }
 
     private void goToNextView(){
-        System.out.println(binding.userTextField.getText());
-        if(binding.userTextField.getText().equals("admin")){
+        String data = binding.userTextField.getText().toString();
+        System.out.println();
+        if(data.equals("admin")){
             System.out.println("true");
             Navigation.findNavController(this.getView()).navigate(LoginDirections.actionLoginToDashboard("paquete"));
         }else{
@@ -51,4 +53,9 @@ public class Login extends Fragment {
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+    }
 }

@@ -47,5 +47,7 @@
     <string name="diet_schedule_col3_tools_text">Columna 3</string>
     <string name="diet_schedule_col4_tools_text">Columna 4</string>
 
+    <!-- Patients Progress Fragment -->
+    <string name="patient_button_upload_progress_text">Subir Progreso</string>
 
 </resources>

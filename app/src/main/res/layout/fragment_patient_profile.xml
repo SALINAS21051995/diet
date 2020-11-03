@@ -29,7 +29,7 @@
             app:layout_constraintTop_toBottomOf="@+id/patients_actual_weight_textView" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linearLayoutCompat"
+            android:id="@+id/user_info_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
@@ -125,9 +125,11 @@
         <TextView
             android:id="@+id/textView14"
             style="@style/patients_weigages_description_style"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
             android:text="@string/patients_last_weight_description_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+            app:layout_constraintTop_toBottomOf="@+id/user_info_layout" />
 
         <TextView
             android:id="@+id/patients_last_weight_textView"

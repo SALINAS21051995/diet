@@ -53,6 +53,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/dashboard_text_1"
+            android:textAllCaps="false"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

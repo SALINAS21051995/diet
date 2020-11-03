@@ -8,13 +8,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorSecondaryAccent">
 
         <LinearLayout
             android:id="@+id/loginContainer"
             android:layout_width="325dp"
             android:layout_height="370dp"
-            android:background="@color/colorAccent"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
@@ -31,8 +30,8 @@
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/login_image_description_text"
                 android:padding="10dp"
-                app:srcCompat="@drawable/ic_diet"
-                tools:srcCompat="@drawable/ic_diet" />
+                app:srcCompat="@drawable/ic_heart"
+                tools:srcCompat="@drawable/ic_heart" />
 
             <EditText
                 android:id="@+id/userTextField"
@@ -53,7 +52,7 @@
                 style="@style/login_button_style"
                 android:layout_width="match_parent"
                 android:text="@string/login_button_text"
-                app:backgroundTint="@color/colorSecondary" />
+                app:backgroundTint="@color/colorPrimary" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

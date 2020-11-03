@@ -1,5 +1,7 @@
 package com.appside.losefatsquick.models;
 
+import com.appside.losefatsquick.view.patient.PatientProgress;
+
 public class PatientProcess {
     private String name;
     private String height;
@@ -18,6 +20,13 @@ public class PatientProcess {
         this.weightDifference = weightDifference;
         this.time = time;
     }
+
+    public PatientProcess(String name, String actualWeight, String lastWeight){
+        this.name = name;
+        this.actualWeight = actualWeight;
+        this.lastWeight = lastWeight;
+    }
+
     public PatientProcess(){}
 
     public String getName() {

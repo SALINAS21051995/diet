@@ -51,5 +51,9 @@
         android:id="@+id/patientProgress"
         android:name="com.appside.losefatsquick.view.patient.PatientProgress"
         android:label="fragment_patient_progress"
-        tools:layout="@layout/fragment_patient_progress" />
+        tools:layout="@layout/fragment_patient_progress" >
+        <argument
+            android:name="patientsProcess"
+            app:argType="string" />
+    </fragment>
 </navigation>
